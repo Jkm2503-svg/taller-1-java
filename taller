@@ -1,0 +1,170 @@
+import java.util.Scanner;
+public class taller{
+	public static void main(String[] args) {
+		
+		Scanner uno= new Scanner (System.in);
+		System.out.println("Digite la opcion de 1 a 5: ");
+		int opcion=uno.nextInt();
+		if(opcion==1){
+			int saldo;
+			Scanner uno_1= new Scanner (System.in);
+			System.out.println("Digite el numero del celular: ");
+			long numero_cel= uno_1.nextLong();
+			long ultimo_digito= numero_cel%10;
+			System.out.println("cuanto desea recargar?: ");
+			int recarga= uno_1.nextInt();
+		if(recarga>=30000){
+			if ((ultimo_digito==1)||(ultimo_digito==2)||(ultimo_digito==3)||(ultimo_digito==6)||(ultimo_digito==7)){
+				System.out.println("su saldo actual es de: 0 "+" su recarga es de: "+recarga+ " al numero: "+numero_cel);
+				System.out.println("se aprueba la PROMOCION, 'recarga doble'"+" su nuevo saldo es: "+recarga*2 );
+			}else if ((ultimo_digito==0)||(ultimo_digito==4)||(ultimo_digito==5)||(ultimo_digito==8)||(ultimo_digito==9)){
+				System.out.println("su saldo actual es de: 0 "+" su recarga es de: "+recarga+ " al numero: "+numero_cel);
+				System.out.println("se aprueba la PROMOCION, 'recarga triple'"+" su nuevo saldo es: "+recarga*3 );
+				}
+			}else{
+				System.out.println("no aplica ninguna promocion"+"su nuevo saldo es: "+recarga);
+			}
+
+		}
+		
+	
+		if(opcion==2){
+			Scanner dos= new Scanner (System.in);
+			System.out.println("**Bienvenid@s**");
+			System.out.println("tenemos los siguientes origenes");
+			System.out.println("1.Bogota-Cartagena, 2.Cartagena-Pasto, 3.Cali-Medellin, 4.Pereira-Santa Marta");
+			System.out.println("Digite el numero de origen: ");
+			int origen= dos.nextInt();
+			if(origen==1){
+				long valor1=89000;
+				System.out.println("el precio es de: "+valor1);
+				System.out.println("Digite la cantidad de boletos: ");
+				int cant_boletos= dos.nextInt();
+				System.out.println("El valor a pagar es de: "+valor1*cant_boletos);
+			}else if(origen==2){
+				long valor2=180000;
+				System.out.println("el precio es de: "+valor2);
+				System.out.println("Digite la cantidad de boletos: ");
+				int cant_boletos= dos.nextInt();
+				System.out.println("El valor a pagar es de: "+valor2*cant_boletos);
+			}else if(origen==3){
+				long valor3=75000;
+				System.out.println("el precio es de: "+valor3);
+				System.out.println("Digite la cantidad de boletos: ");
+				int cant_boletos= dos.nextInt();
+				System.out.println("El valor a pagar es de: "+valor3*cant_boletos);
+			}else if(origen==4){
+				long valor4=60000;
+				System.out.println("el precio es de: "+valor4);
+				System.out.println("Digite la cantidad de boletos: ");
+				int cant_boletos= dos.nextInt();
+				System.out.println("El valor a pagar es de: "+valor4*cant_boletos);
+			}else{
+				System.out.println("Digite una opcion de 1 a 4");
+			}
+		}
+
+		if(opcion==3){
+			Scanner tres= new Scanner (System.in);
+			System.out.println("Digite el radio para su cilindro: ");
+			double radio_cilindro= tres.nextDouble();
+			System.out.println("Digite la altura para su cilindro: ");
+			Double altura_cilindro= tres.nextDouble();
+			System.out.println("el volumen de su cilindro es: "+3.1416*radio_cilindro*radio_cilindro*altura_cilindro);
+		}
+
+		if(opcion==4){
+			long camiseta=30000*5/100;
+			long pantalon=45000*7/100;
+			long chaqueta=50000*5/100;
+			long pantaloneta=35000*12/100;
+			long tenis=60000*10/100;
+			System.out.println("**VENTA DE UNIFORMES**");
+			System.out.println("1. la camiseta tiene un precio de: $30000 "+" el incremento de este anio sera de 5%");
+			System.out.println("el precio a pagar por valor unitario es de: "+(camiseta+30000));
+			System.out.println(" ");
+			System.out.println("2. el pantalon tiene un precio de: $45000 "+" el incremento de este anio sera de 7%");
+			System.out.println("el precio a pagar por valor unitario es de: "+(45000+pantalon));
+			System.out.println(" ");
+			System.out.println("3.la chaqueta tiene un precio de: $50000 "+" el incremento de este anio sera de 5%");
+			System.out.println("el precio a pagar por valor unitario es de: "+(50000+chaqueta));
+			System.out.println(" ");
+			System.out.println("4.la pantaloneta tiene un precio de: $35000"+pantaloneta+" el incremento de este anio sera de 12%");
+			System.out.println("el precio a pagar por valor unitario es de: "+(35000+pantaloneta));
+			System.out.println(" ");
+			System.out.println("5.los tenis tienen un precio de: 60000"+" el incremento de este anio sera de 10%");
+			System.out.println("el precio a pagar por valor unitario es de: "+(60000+tenis));
+			System.out.println(" ");
+			System.out.println("Digite el numero de uniformes: ");
+			Scanner cuatro= new Scanner (System.in);
+			int uniformes= cuatro.nextInt();
+			System.out.println("total a pagar: "+((camiseta+30000+45000+pantalon+50000+chaqueta+35000+pantaloneta+60000+tenis)*uniformes));
+
+		}
+
+		if(opcion==5){
+			long carnet;
+			int cantidad_creditos,cantidad_materias,descuento1,descuento2,descuento3,descuento4,descuento5,descuento6;
+			int estudiantes_inscritos, materias_inscritas,mayor_cant_cred,menor_cant_cred,numero;
+			estudiantes_inscritos=materias_inscritas=mayor_cant_cred=menor_cant_cred=numero=0;
+			descuento1=400000*10/100;
+			descuento2=400000*15/100;
+			descuento3=360000*10/100;
+			descuento4=360000*15/100;
+			descuento5=280000*10/100;
+			descuento6=280000*15/100;//ponerle a cada estudiante una psoicion 
+			for (int i=0;i<=5 ;++i ) {
+			Scanner cinco= new Scanner (System.in);
+
+			System.out.println("Digite el numero de carnet: ");
+			carnet=cinco.nextLong();
+			carnet=numero;
+			estudiantes_inscritos+=numero;
+
+			System.out.println(" ");
+			System.out.println("**valor de pago por cantidad de creditos**");
+			System.out.println("1.menos de 6 creditos= $400000");
+			System.out.println("2.entre 6 y 9 creditos= $360000");
+			System.out.println("3.mas de 9 creditos= $280000");
+			System.out.println(" ");
+			System.out.println("**Descuento por cantidad de materias inscritas**");
+			System.out.println("1.entre 4 y 6 materias= 10%");
+			System.out.println("2.mas de 6 materias= 15%");
+			System.out.println(" ");
+			System.out.println("Digite el numero de creditos que desea: ");
+			cantidad_creditos=cinco.nextInt();
+
+			System.out.println("Digite el numero de materias a inscribir: ");
+			cantidad_materias=cinco.nextInt();
+
+			if ((cantidad_creditos<=6)||(cantidad_creditos>=0)&&(cantidad_materias==4)||(cantidad_materias==6)) {
+				System.out.println("Debe pagar $400000"+" al inscribir entre 4 y 6 materias su descuento es de 10%");
+				System.out.println("total de pago: "+(400000-(descuento1-cantidad_materias)));
+			}else if ((cantidad_creditos<=6)||(cantidad_creditos>=0)&&(cantidad_materias>=6)){
+				System.out.println("Debe pagar $40000"+" al inscribir mas de 6 materias su descuento es de 15%");
+				System.out.println("total de pago: "+(400000-(descuento2-cantidad_materias)));
+			}else if ((cantidad_creditos==6)||(cantidad_creditos<=9)&&(cantidad_materias==4)||(cantidad_materias==6)) {
+				System.out.println("Debe pagar $360000"+" al inscribir entre 4 y 6 materias su descuento es de 10%");
+				System.out.println("total de pago: "+(360000-(descuento3-cantidad_materias)));
+			}else if ((cantidad_creditos==6)||(cantidad_creditos<=9)&&(cantidad_materias>=6)) {
+				System.out.println("Debe pagar $360000"+" al inscribir mas de 6 materias su descuento es de 15%");
+				System.out.println("total de pago: "+(360000-(descuento4-cantidad_materias)));
+			}else if ((cantidad_creditos==9)||(cantidad_creditos>=9)&&(cantidad_materias==4)||(cantidad_materias==6)){
+				System.out.println("Debe pagar $280000"+" al inscribir entre 4 y 6 materias su descuento es de 10%");
+				System.out.println("total de pago: "+(280000-(descuento5-cantidad_materias) ));
+			} else if ((cantidad_creditos==9)||(cantidad_creditos>=9)&&(cantidad_materias>=6)) {
+				System.out.println("Debe pagar $280000"+" al inscribir mas de 6 materias su descuento es de 15%");
+				System.out.println("total de pago: "+(280000-(descuento6-cantidad_materias)));
+			}else{
+				System.out.println("Digite una cantidad de creditos correcta o materias");
+				}
+				System.out.println("el total de estudiantes inscritos es: "+estudiantes_inscritos);
+				System.out.println("el total de materias inscritas es: "+materias_inscritas);
+				System.out.println("el estudiante con  mayor cantidad de creditos es: ");
+				System.out.println("el estudiante con menor cantida de creditos es: ");
+			}
+
+		}	
+			
+	}
+}
